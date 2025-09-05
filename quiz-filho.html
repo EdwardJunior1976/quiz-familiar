@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>O que você sabe sobre seu filho?</title>
+  <style>
+    body { font-family: Arial, sans-serif; background-color:#f9f9f9; margin:0; padding:0; }
+    .container { max-width:800px; margin:30px auto; background:#fff; padding:20px 30px; border-radius:12px; box-shadow:0 4px 8px rgba(0,0,0,0.1); }
+    h1 { text-align:center; color:#333; }
+    .question { margin:20px 0; padding:15px; border-bottom:1px solid #ddd; }
+    .question:last-child { border-bottom:none; }
+    .question-text { font-size:16px; margin-bottom:10px; font-weight:bold; }
+    .radio-group { display:flex; gap:20px; }
+    button { background-color:#007BFF; color:#fff; border:none; padding:12px 20px; font-size:16px; border-radius:8px; cursor:pointer; display:block; margin:20px auto; }
+    button:hover { background-color:#0056b3; }
+    .result { margin-top:30px; padding:20px; border-radius:10px; text-align:center; font-size:18px; font-weight:bold; display:none; }
+    .high { background-color:#d4edda; color:#155724; }
+    .medium { background-color:#fff3cd; color:#856404; }
+    .low { background-color:#f8d7da; color:#721c24; }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>O que você sabe sobre seu filho?</h1>
+    <form id="quizForm">
+
+      <div class="question">
+        <div class="question-text">1. Você conhece o melhor amigo do seu filho?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q1" value="SIM"> SIM</label>
+          <label><input type="radio" name="q1" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">2. Sabe qual é a coisa que ele mais teme?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q2" value="SIM"> SIM</label>
+          <label><input type="radio" name="q2" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">3. Conhece o seu programa de TV favorito?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q3" value="SIM"> SIM</label>
+          <label><input type="radio" name="q3" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">4. Sabe se ele gosta mais de matemática ou de Geografia?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q4" value="SIM"> SIM</label>
+          <label><input type="radio" name="q4" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">5. Saberia dizer qual a cor que ele gostaria de ter nas paredes do quarto?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q5" value="SIM"> SIM</label>
+          <label><input type="radio" name="q5" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">6. Conhece qual é o herói do seu filho?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q6" value="SIM"> SIM</label>
+          <label><input type="radio" name="q6" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">7. Sabe se ele se sente querido pelos colegas na escola?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q7" value="SIM"> SIM</label>
+          <label><input type="radio" name="q7" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">8. Saberia dizer o que ele mais gostaria de fazer nas próximas férias?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q8" value="SIM"> SIM</label>
+          <label><input type="radio" name="q8" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">9. Sabe qual o objeto pessoal a que ele dá mais valor?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q9" value="SIM"> SIM</label>
+          <label><input type="radio" name="q9" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">10. Sabe dizer qual a comida de que ele mais gosta? E a que detesta?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q10" value="SIM"> SIM</label>
+          <label><input type="radio" name="q10" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">11. Sabe dizer qual seu filho considera ser seu maior talento ou habilidade específica?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q11" value="SIM"> SIM</label>
+          <label><input type="radio" name="q11" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">12. Conhece qual o aspecto ou detalhe da aparência de seu filho que ele menos gosta?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q12" value="SIM"> SIM</label>
+          <label><input type="radio" name="q12" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">13. Sabe o que ele deseja ser no futuro profissionalmente?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q13" value="SIM"> SIM</label>
+          <label><input type="radio" name="q13" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">14. Conhece quais dos afazeres ou tarefas domésticas ele menos aprecia?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q14" value="SIM"> SIM</label>
+          <label><input type="radio" name="q14" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">15. Sabe dizer qual acontecimento, momento ou ocasião familiar ele mais gosta?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q15" value="SIM"> SIM</label>
+          <label><input type="radio" name="q15" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">16. Conhece os apelidos que os outros adolescentes dão ao seu filho?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q16" value="SIM"> SIM</label>
+          <label><input type="radio" name="q16" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">17. Conhece os feitos ou realizações de que seu filho mais se orgulha?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q17" value="SIM"> SIM</label>
+          <label><input type="radio" name="q17" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">18. Sabe qual a maior queixa ou reclamação que seu filho tem da família?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q18" value="SIM"> SIM</label>
+          <label><input type="radio" name="q18" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">19. Conhece seu estilo favorito de música?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q19" value="SIM"> SIM</label>
+          <label><input type="radio" name="q19" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">20. Sabe quais esportes ele tem prazer em praticar?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q20" value="SIM"> SIM</label>
+          <label><input type="radio" name="q20" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">21. Sabe qual seu estilo ou tipo de roupa favorito?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q21" value="SIM"> SIM</label>
+          <label><input type="radio" name="q21" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">22. Sabe o que seu filho gostaria de mudar ou modificar nele mesmo?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q22" value="SIM"> SIM</label>
+          <label><input type="radio" name="q22" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">23. Saberia dizer qual a situação que o deixa mais embaraçado?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q23" value="SIM"> SIM</label>
+          <label><input type="radio" name="q23" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">24. Conhece a pessoa, fora do âmbito familiar, que mais influencia ou tem influenciado seu filho?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q24" value="SIM"> SIM</label>
+          <label><input type="radio" name="q24" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <div class="question">
+        <div class="question-text">25. Saberia dizer o que ele está fazendo neste exato momento?</div>
+        <div class="radio-group">
+          <label><input type="radio" name="q25" value="SIM"> SIM</label>
+          <label><input type="radio" name="q25" value="NÃO"> NÃO</label>
+        </div>
+      </div>
+
+      <button type="button" onclick="calculateResult()">Ver Resultado</button>
+    </form>
+    <div id="result" class="result"></div>
+  </div>
+  <script>
+    function calculateResult() {
+      let score = 0;
+      let unanswered = false;
+      for(let i=1;i<=25;i++){
+        let answer=document.querySelector('input[name="q'+i+'"]:checked');
+        if(!answer){unanswered=true;} else if(answer.value==="SIM"){score++;}
+      }
+      if(unanswered){alert("Por favor, responda todas as perguntas antes de ver o resultado."); return;}
+      let resultDiv=document.getElementById("result");
+      resultDiv.style.display="block";
+      if(score < 12){
+        resultDiv.textContent="Você precisa ficar mais tempo com ele, ouvi-lo mais e ser observador(a). 😔";
+        resultDiv.className="result low";
+      } else if(score <= 18){
+        resultDiv.textContent="Você o conhece razoavelmente bem, mas pode melhorar. 🙂";
+        resultDiv.className="result medium";
+      } else {
+        resultDiv.textContent="Você conversa bastante com ele e o conhece bem ou é bastante observador(a). 😃";
+        resultDiv.className="result high";
+      }
+    }
+  </script>
+</body>
+</html>
